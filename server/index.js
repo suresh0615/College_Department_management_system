@@ -78,7 +78,7 @@ app.post('/api/v1/register/admin', async (req, res) => {
 // Register Teacher Route
 app.post('/api/v1/register/teacher', async (req, res) => {
   const { name, email, password, personalId } = req.body;
-  const expectedPersonalId = process.env.PERSONAL_ID; // Retrieve the personal ID from .env
+  const expectedPersonalId = process.env.PERSONAL_id; // Retrieve the personal ID from .env
 
   // Check if the provided personalId matches the one in the .env file
   if (personalId !== expectedPersonalId) {
